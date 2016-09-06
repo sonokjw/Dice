@@ -1,11 +1,19 @@
 void setup()
 {
 	noLoop();
-	size(600, 650);
+	size(600, 700);
 }
 
 String totalnumber = "Total: ";
+String averagenumber = "Average: ";
+String rollnumber = "# of Rolls: ";
+String averagetotalnumber = "Average total number: ";
 int total = 0;
+int sum = 0;
+int average;
+int numberofroll = 1;
+int averagetotal = 0;
+
 void draw()
 {
 	//your code here
@@ -19,12 +27,16 @@ void draw()
 	}
 	textAlign(CENTER, TOP);
 	fill(135, 193, 218);
-	textSize(30);
-	text(totalnumber + total, 300, 610);
+	textSize(25);
+	text(totalnumber + total, 100, 610);
+	text(averagenumber + average, 100, 650);
+	text(rollnumber + numberofroll, 400, 610);
+	text(averagetotalnumber + averagetotal, 400, 650);
 }
 void mousePressed()
 {
 	total = 0;
+	numberofroll ++;
 	redraw();
 }
 class Die //models one single dice cube
@@ -42,6 +54,9 @@ class Die //models one single dice cube
 	{
 		//your code here
 		total = total + number;
+		sum = sum + number;
+		average = (int)(total/64);
+		averagetotal = (int)((sum)/numberofroll);
 	}
 	void show()
 	{
