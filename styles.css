@@ -1,8 +1,8 @@
 
 body {
-    background-color: rgb(200,200,200);
-    color: rgb(0,0,0);
-    font-family: "Open Sans", sans-serif;
+    background-color: rgb(255);
+    color: rgb(153, 193, 218);
+    font-family: "Trebuchet MS", Helvetica, sans-serif
     text-align: center;
 }
 
@@ -13,7 +13,8 @@ body {
 }
 
 header {
-	
+	font-family: "Arial Black", Gadget, sans-serif;
+    color: rgb(247, 217, 95);
 }
 
 footer {
